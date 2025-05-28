@@ -5,11 +5,11 @@ This project intends to design an updated website as a replacement for radio.mac
 ## Wireframes
 The following are wireframe plans for the ABN website redesign.
 
-![Proposed Logo](wireframes/01_Proposed%20ABN%20logo.jpg)
+![Proposed Logo](wireframes/01_Proposed_ABN_logo.jpg)
 
 - Proposed logo for ABN website
 
-![Homepage](wireframes\02_Home.jpg)
+![Homepage](wireframes/02_Home.jpg)
 
 # Homepage Wireframe
  
@@ -69,7 +69,7 @@ begin footer
 
 end footer
 
-![Schedule Page](wireframes\03-Schedule.jpg)
+![Schedule Page](wireframes/03-Schedule.jpg)
 # Schedule Page Wireframe
 
 begin navigation
@@ -117,7 +117,7 @@ begin footer
 
 end footer
 
-![About Page](wireframes\04_About.jpg)
+![About Page](wireframes/04_About.jpg)
 
 # About Page Wireframe
 
@@ -161,7 +161,7 @@ begin footer
 
 end footer
 
-![Station Journal](wireframes\05_StationJournal.jpg)
+![Station Journal](wireframes/05_StationJournal.jpg)
 
 # Station Journal Page Wireframe
 
@@ -209,7 +209,7 @@ begin footer
 
 end footer
 
-![Connect](wireframes\06_Connect.jpg)
+![Connect](wireframes/06_Connect.jpg)
 
 # Connect Page Wireframe
 
@@ -261,7 +261,7 @@ begin footer
 
 end footer
 
-![Support](wireframes\07_Support.jpg)
+![Support](wireframes/07_Support.jpg)
 
 # Support Page Wireframe
 
@@ -306,7 +306,7 @@ begin footer
 ###### Copyright
 end footer
 
-![Network Affiliates](wireframes\08_NetworkAffiliates.jpg)
+![Network Affiliates](wireframes/08_NetworkAffiliates.jpg)
 
 # Network Affilates Page Wireframe
 
