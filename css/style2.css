@@ -1,0 +1,140 @@
+body { 
+    background-image: url('../images/1920x1080menuscreen.png');
+    background-size: 1050px auto;      /* Fixed size, no scaling */
+    background-position: left top;     /* Anchor to the top-left corner */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000;            /* Fill remaining space with black */
+    font-family: 'Federo', sans-serif !important;
+    font-size: 35px;
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+a {
+    color: black;
+}
+
+
+
+.absolute-link1 {
+    position: absolute;
+    top: 252px;   /* 253 + 2 */
+    left: 194px;  /* 187 + 7 */
+    z-index: 1;
+}
+.absolute-link2 {
+    position: absolute;
+    top: 297px;   /* 295 + 2 */
+    left: 194px;  /* 187 + 7 */
+    z-index: 1;
+}
+.absolute-link3 {
+    position: absolute;
+    top: 342px;   /* 337 + 2 */
+    left: 181px;  /* 174 + 7 */
+    z-index: 1;
+}
+.absolute-link4 {
+    position: absolute;
+    top: 390px;   /* 380 + 2 */
+    left: 178px;  /* 171 + 7 */
+    z-index: 1;
+}
+.absolute-link5 {
+    position: absolute;
+    top: 435px;   /* 423 + 2 */
+    left: 178px;  /* 171 + 7 */
+    z-index: 1;
+}
+.absolute-link6 {
+    position: absolute;
+    top: 480px;   /* 465 + 2 */
+    left: 181px;  /* 174 + 7 */
+    z-index: 1;
+}
+.absolute-link7 {
+    position: absolute;
+    top: 527px;   /* 507 + 2 */
+    left: 188px;  /* 181 + 7 */
+    z-index: 1;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 2;
+}
+
+/* Remove .wrapper flex styles if not needed elsewhere */
+
+.menu-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 1;
+    z-index: 999; /* just below .menu-panel */
+    transition: opacity 0.5s;
+    pointer-events: none; /* so clicks go through to menu-panel */
+}
+
+.menu-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/1920x1080menuscreen.png') left top no-repeat;
+    background-size: 1140px auto; /* or cover, if you want it to fill the screen */
+    box-shadow: -4px 0 16px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* When loaded, add this class to slide in */
+.menu-panel.active {
+    transform: translateX(0);
+}
+
+.menu-panel.exiting {
+    transform: translateX(100vw);
+    transition-delay: 0.2s;
+}
+
+.menu-panel a[class^="absolute-link"] {
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1), opacity 0.5s;
+    transform: translateX(100vw);
+    opacity: 0;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.menu-panel.active a[class^="absolute-link"] {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menu-panel.exiting a[class^="absolute-link"] {
+    transform: translateX(100vw);
+    opacity: 0;
+    /* No need for transition-delay here, it's set above */
+}
+
+.menu-panel.exiting .absolute-link1,
+.menu-panel.exiting .absolute-link2,
+.menu-panel.exiting .absolute-link3,
+.menu-panel.exiting .absolute-link4,
+.menu-panel.exiting .absolute-link5,
+.menu-panel.exiting .absolute-link6,
+.menu-panel.exiting .absolute-link7 {
+    transition-delay: 0s;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antioch Broadcasting Network Page Menu</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Monoton&family=Notable&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-bg"></div>
+    <div class="menu-panel">
+        <a href="index.html" class="absolute-link1">Home</a>
+        <a href="About.html" class="absolute-link2">About</a>
+        <a href="Support.html" class="absolute-link3">Support</a>
+        <a href="Schedule.html" class="absolute-link4">Schedule</a>
+        <a href="Connect.html" class="absolute-link5">Connect</a>
+        <a href="Network Affiliates.html" class="absolute-link6">Affiliates</a>
+        <a href="Station Journal.html" class="absolute-link7">Journal</a>
+        <a href="javascript:void(0);" class="close-btn" id="closeMenuBtn">
+            <img src="images/exit.png" alt="Close Menu" style="width:40px;height:40px;border:none;">
+        </a>
+    </div>
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var bg = localStorage.getItem('menuBg');
+            if(bg) {
+                document.body.style.background = `url(${bg}) center center / cover no-repeat`;
+            }
+            // Now trigger the menu slide-in as before
+            document.querySelector('.menu-panel').classList.add('active');
+            // ...rest of your menu.js code...
+        });
+    </script>
+</body>
+</html>
