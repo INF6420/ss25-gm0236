@@ -11,3 +11,22 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const homeBtn = document.getElementById('homeBtn');
+  if (homeBtn) {
+    homeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 1000);
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.body.classList.contains('home-page')) {
+    document.body.classList.add('fade-in');
+  }
+});

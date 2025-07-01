@@ -30,30 +30,33 @@ body {
 
 .center-text {
     position: absolute;
-    top: 65%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 900px;
-    max-height: 281px;
+    max-height: 250px;
     overflow-y: auto;
     font-family: 'Federo', sans-serif;
 }
 html {
     scroll-behavior: smooth;
 }
-.center-text p {
-    font-size: 32px; /* Adjust as needed */
+.left-text {
+  text-align: left !important;
+  text-indent: 2em;
+  line-height: 2;
+  margin-bottom: 2em; /* Optional: adds space between paragraphs */
+}
+
+.left-text p {
+  font-size: 1em; /* or your preferred size */
 }
 
 p {
-    margin: 0px;
+    margin: 0 0 2em 0;
 }
-.monoton-regular {
-  font-family: "Monoton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 .notable-regular {
   font-family: "Notable", sans-serif !important;
   font-weight: 400;
@@ -64,19 +67,13 @@ p {
     font-family: 'Federo', sans-serif !important;
 }
 
-.center-text p strong {
-    font-family: 'Notable', sans-serif !important;
-}
-.center-text p:first-child {
-    position: relative;
-    top: 40px; /* Adjust as needed */
-}
+
 .large-strong {
-    font-size: 160px;
+    font-size: 121px;
 }
 
 .small-strong {
-    font-size: 60px;
+    font-size: 46.23px;
 }
 .footer {
     position: fixed;
@@ -117,14 +114,14 @@ p {
     font-weight: bold;
     margin: 0;
     padding: 0;
-    font-size: 3.77em;
+    font-size: 74.78px;
 }
 .side-link {
     position: fixed;
-    top: 537px;
+    top: 546px;
     transform: translateY(-50%);
     font-family: 'Notable', sans-serif;
-    font-size: 1.7em;
+    font-size: 28.57px;
     color: #000;
     text-decoration: none;
     background: transparent;
@@ -137,11 +134,159 @@ p {
 
 .left-link {
     left: 50%;
-    transform: translate(-632px, -50%); /* Move left from center */
+    transform: translate(-640px, -50%); /* Move left from center */
 }
 
 .right-link {
     left: 50%;
-    transform: translate(470px, -50%);  /* Move right from center */
+    transform: translate(465px, -50%);  /* Move right from center */
     text-align: right;
+}
+
+.center-text .left-text {
+  text-align: left !important;
+}
+
+.center-text .left-text p {
+  text-align: left !important;
+  text-indent: 2em;
+  line-height: 2;
+  margin-bottom: 2em; /* or 3em for more space */
+  font-size: 1em !important; /* override .center-text p font size */
+}
+
+.fade-in {
+  animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Only for the homepage */
+body.home-page {
+  opacity: 0;
+}
+body.home-page.fade-in {
+  animation: fadeIn 2.1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.24; }
+  to { opacity: 1; }
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Notable', sans-serif;
+  font-weight: bold;
+  font-size: 121px;
+  margin: 0 0;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Notable', sans-serif;
+  font-weight: bold;
+  font-size: 46.23px;
+  margin: .5em 0;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Federo', sans-serif;
+  font-weight: bold;
+  font-size: 28.57px;
+  margin: 1em 0 1em 0; /* Double the vertical margin for more space */
+  line-height: 2;      /* Double spaced lines within the heading if it wraps */
+}
+
+
+h4 {
+  text-align: center;
+  font-family: 'Federo', sans-serif;
+  font-weight: normal;
+  font-size: 17.66px;
+  margin: 0 0;
+}
+h5 {
+  text-align: center;
+  font-family: 'Federo', sans-serif;
+  font-weight: bold;
+  font-size: 28.57px;
+  margin: -1em 0 -2.25em 0; /* Double the vertical margin for more space */
+  line-height: 2;      /* Double spaced lines within the heading if it wraps */
+}
+.About_Title {
+  margin-top: -.75em;
+  margin-bottom: -4em;
+  text-align: center;
+}
+
+.NetworkAffiliates_Title {
+  margin-top: -.75em;
+  margin-bottom: -4em;
+  text-align: center;
+}
+
+.Home_Title {
+  margin-top: 4em;
+  margin-bottom: 10em;
+  text-align: center;
+}
+
+.Contact_Title {
+  margin-top: -.75em;
+  margin-bottom: -4em;
+  text-align: center;
+}
+
+.Schedule_Title {
+  margin-top: -.75em;
+  margin-bottom: -4em;
+  text-align: center;
+}
+
+.StationJournal_Title {
+  margin-top: -.75em;
+  margin-bottom: -4em;
+  text-align: center;
+}
+
+.Support_Title {
+  margin-top: -.75em;
+  margin-bottom: -4em;
+  text-align: center;
+}
+.Listen {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+.Antioch_Broadcaster_Links {
+  margin-top: 3em;
+  margin-bottom: 5em;
+  text-align: left;
+}
+
+.Antioch_Broadcaster_Links p {
+  text-indent: 0 !important;
+}
+.Rebroad_Msg  {
+  margin-top: 6em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+.banner {
+  width: 30%;      /* Makes the image as wide as its container */
+  max-width: 900px; /* Or any specific width you want */
+  height: auto;     /* Maintains aspect ratio */
+  display: block;
+  margin: 5em auto -2em auto; /* Optional: adds vertical space and centers */
+opacity: 89%;
 }
