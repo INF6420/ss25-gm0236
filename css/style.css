@@ -290,3 +290,67 @@ h5 {
   margin: 5em auto -2em auto; /* Optional: adds vertical space and centers */
 opacity: 89%;
 }
+.form {
+  margin-top: -3em;
+  margin-bottom: -15em;;  
+  margin-left: 12%;
+  text-align: justify;
+    
+}
+label {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 17.66px;
+  font-weight: bold;
+}
+button {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 17.66px;
+  margin: 39%;
+  margin-top: 3em;
+  cursor: pointer;
+}
+.Connect_Message {
+margin-top: 5em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+.form_input {
+  width: 85%;
+  padding: 0.5em;
+  font-size: 17.66px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  border: 1px solid #ccc; /* <-- Add this line */
+}
+input.form_input:focus,
+textarea.form_input:focus {
+  outline: none;
+  border: 2px solid #0b0b0b;
+  background: #f7f7f7;
+  box-shadow: 0 0 4px #0b0b0b22;
+}
+
+.Message {
+  /* Remove height: 150px; */
+  resize: none; /* Not needed here */
+  /* You can keep margin or padding if you want */
+}
+
+.Message textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.error {
+  border-color: red;
+  font-size: 17.66px;
+}
+.error-message {
+  color: red;
+  margin: 0em 0 1.5em; /* Adds space above and below the error message */
+}
