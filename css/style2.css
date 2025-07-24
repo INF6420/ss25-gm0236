@@ -98,6 +98,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* When loaded, add this class to slide in */
@@ -113,7 +114,7 @@ a {
 .menu-panel a[class^="absolute-link"] {
     transition: transform 0.5s cubic-bezier(.77,0,.18,1), opacity 0.5s;
     transform: translateX(100vw);
-    opacity: 0;
+    opacity: 0.01;
     will-change: transform, opacity;
     backface-visibility: hidden;
 }
@@ -125,7 +126,7 @@ a {
 
 .menu-panel.exiting a[class^="absolute-link"] {
     transform: translateX(100vw);
-    opacity: 0;
+    opacity: 0.01;
     /* No need for transition-delay here, it's set above */
 }
 
